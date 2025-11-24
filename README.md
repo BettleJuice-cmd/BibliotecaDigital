@@ -1,6 +1,8 @@
 # Sistema de Búsqueda para Biblioteca Digital Estudiantil 
 
 Este proyecto es un prototipo de software desarrollado en C# (Windows Forms) diseñado para simular el funcionamiento de un motor de búsqueda bibliográfico. Implementa diversos algoritmos fundamentales de las Ciencias de la Computación para localizar libros por título, autor, año y contenido.
+Informe en PDF:
+https://drive.google.com/drive/folders/18Ahmf0zKY5pX3NGb1RSLpDW4tnCQhl3V?usp=drive_link
 
 ## Objetivos:
 * **Implementar algoritmos de búsqueda** (Lineal y Binaria) en un entorno visual.
