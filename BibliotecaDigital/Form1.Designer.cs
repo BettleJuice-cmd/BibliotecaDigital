@@ -31,7 +31,7 @@
             this.dgvLibros = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tbBuscar = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbOpciones = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnTodos = new System.Windows.Forms.Button();
             this.btnAnalisis = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.dgvLibros.RowHeadersWidth = 51;
             this.dgvLibros.RowTemplate.Height = 24;
             this.dgvLibros.Size = new System.Drawing.Size(655, 282);
-            this.dgvLibros.TabIndex = 0;
+            this.dgvLibros.TabIndex = 7;
             // 
             // label1
             // 
@@ -64,18 +64,18 @@
             this.tbBuscar.Size = new System.Drawing.Size(160, 22);
             this.tbBuscar.TabIndex = 2;
             // 
-            // comboBox1
+            // cmbOpciones
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Titulo",
-            "Autor",
-            "Descripción"});
-            this.comboBox1.Location = new System.Drawing.Point(332, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
+            this.cmbOpciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOpciones.FormattingEnabled = true;
+            this.cmbOpciones.Items.AddRange(new object[] {
+            "Título (Lineal)",
+            "Autor (Binaria)",
+            "Descripción (Texto)"});
+            this.cmbOpciones.Location = new System.Drawing.Point(332, 49);
+            this.cmbOpciones.Name = "cmbOpciones";
+            this.cmbOpciones.Size = new System.Drawing.Size(121, 24);
+            this.cmbOpciones.TabIndex = 3;
             // 
             // btnBuscar
             // 
@@ -85,6 +85,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnTodos
             // 
@@ -94,6 +95,7 @@
             this.btnTodos.TabIndex = 5;
             this.btnTodos.Text = "VER TODOS";
             this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // btnAnalisis
             // 
@@ -103,6 +105,7 @@
             this.btnAnalisis.TabIndex = 6;
             this.btnAnalisis.Text = "VER MÁS ANTIGUO";
             this.btnAnalisis.UseVisualStyleBackColor = true;
+            this.btnAnalisis.Click += new System.EventHandler(this.btnAnalisis_Click);
             // 
             // Form1
             // 
@@ -112,12 +115,14 @@
             this.Controls.Add(this.btnAnalisis);
             this.Controls.Add(this.btnTodos);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbOpciones);
             this.Controls.Add(this.tbBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvLibros);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "BIBLIOTECA DIGITAL";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,7 +134,7 @@
         private System.Windows.Forms.DataGridView dgvLibros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbBuscar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbOpciones;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnTodos;
         private System.Windows.Forms.Button btnAnalisis;
